@@ -1,0 +1,13 @@
+{
+	"name": "Arch",
+	"image": "archlinux:base-devel",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"mutantdino.resourcemonitor"
+			]
+		}
+	},
+	"postCreateCommand": "pacman --sync --refresh --noconfirm git",
+	"postStartCommand": "pacman --sync --refresh --sysupgrade --noconfirm"
+}
